@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Snake</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="modal">
+            <div class="pop_up">
+                <h2>Records</h2>
+                <ol class="records_board"></ol>
+                <div>
+                    <button class="newGame">Restart</button>
+                    <button class="close">Close</button>
+                </div>
+            </div>
+
+            <div class="game_over ">
+                <h2>Game Over</h2>
+                <p class="finish_score"></p>
+                <div>
+                    <button class="records">Records</button>
+                    <button class="close">Close</button>
+                </div>
+                
+            </div>
+        </div>
+        <div class="wrapper">
+            <nav>
+                <h1>Snake</h1>
+                <div class="score_info">
+                    <p>Score: </p>
+                    <p class="score"></p> 
+                </div>
+
+                <button class="newGame" >New Game</button>
+                <button class="records">Records</button>     
+            </nav>
+
+            <canvas class="game" width="640" height="640"></canvas>
+        </div>
+    
+        <footer>
+            <a href="https://rs.school/js-stage0/" target="_blank"><img src="img/rs_school_js.svg" height="50" width="60"></a>
+            <p>2023</p>
+            <a href="https://github.com/patciahevich" target="_blank">patciahevich</a>
+        </footer>
+        <script src="index.js"></script>
+    </body>
+</html>

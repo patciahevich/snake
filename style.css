@@ -1,0 +1,244 @@
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: 'Caprasimo', sans-serif;
+}
+.wrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+h1 {
+    font-size: 50px;
+    color: palevioletred;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+footer {
+    height: 50px;
+    width: 100%;
+
+    position: fixed;
+    bottom: 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s;
+    color: black;
+    
+}
+
+button:hover, a:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+button:active, a:active{
+    transform: scale(1);
+}
+
+.score_info {
+    margin-top: 40px;
+    display: flex;
+    font-size: 25px;
+    gap: 10px;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+
+    background-color: #e3b8d9;
+    border: none;
+    box-shadow: 3px 3px 5px #f294dc;
+    
+    font-size: 20px;
+
+    transition: all 0.3s;
+}
+
+.modal {
+    display: none;
+
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+}
+
+.pop_up {
+    display: none;
+    opacity: 0;
+
+    width: 400px;
+    height: 500px;
+
+    justify-content: space-between;
+
+    padding: 20px 10px;
+
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 3px 1px 11px rgb(171, 164, 164);
+    font-family: 'Orbitron';
+    text-align: center;
+
+    transition: all 0.3s;
+}
+
+.pop_up ol {
+    height: 70%;
+}
+
+.pop_up div {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.game_over {
+    opacity: 0;
+    width: 400px;
+    height: 145px;
+    border-radius: 15px;
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+
+    background-color: white;
+    color: #f029c8;
+    box-shadow: 3px 1px 11px rgb(171, 164, 164);
+    transition: all 0.3s;
+}
+
+.game_over div {
+    display: flex;
+    gap: 20px;
+}
+
+.game_over p {
+    color: black;
+}
+
+.game_over input {
+    height: 40px;
+    width: 300px;
+
+    border: 2px solid;
+    font-size: 20px;
+    font-family: 'Orbitron';
+}
+.modal.active {
+    display: flex;
+}
+.pop_up.active {
+    display: block;
+}
+
+.game_over.active {
+    display: flex;
+}
+.game_over.active.fadeIn {
+    opacity: 1;
+}
+
+.pop_up.active.fadeIn {
+    opacity: 1;
+}
+
+.form {
+    display: none;
+}
+
+.form.active {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pop_up h2 {
+    font-size: 40px;
+    text-align: center;
+}
+
+
+.pop_up ol {
+    margin: 0 100px;
+    padding: 20px;
+}
+
+.pop_up ol li {
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: right;
+}
+
+.pop_up ol li:first-child {
+    color: #f029c8;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Caprasimo';
+    src: url("fonts/Caprasimo-Regular.ttf")
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('fonts/Orbitron-VariableFont_wght.ttf');
+}
+
+@media  screen and (width < 850px) { 
+    body {
+        height: 99vh;
+        justify-content: space-between;
+    }
+    .wrapper {
+        flex-direction: column-reverse;
+    }
+    
+    nav {
+        flex-direction: row;
+        align-items: center;
+       
+    }
+
+    .score_info {
+        margin-top: 10px;
+    }
+
+    footer {
+        position: relative;
+    }
+}
